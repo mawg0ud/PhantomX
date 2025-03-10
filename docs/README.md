@@ -18,27 +18,39 @@ PhantomX is an advanced **EDR (Endpoint Detection and Response) evasion tool** b
 ```
 PhantomX/
 │── src/
-│   │── main.go              # Main entry file
-│   │── memory_evasion.go    # Handles memory evasion techniques
-│   │── shellcode_loader.go  # Loads and executes shellcode
-│   │── encryption.go        # Encrypts/decrypts shellcode
-│   │── anti_debugging.go    # Implements anti-debugging & sandbox checks
-│   │── syscalls.go          # Implements direct system calls
-│   └── utils.go             # Utility functions (config loading, file handling)
+│   │── main.go                # Main entry file
+│   │── memory_evasion.go      # Handles memory evasion techniques
+│   │── shellcode_loader.go    # Loads and executes shellcode
+│   │── encryption.go          # Encrypts/decrypts shellcode
+│   │── anti_debugging.go      # Implements anti-debugging & sandbox checks
+│   │── syscalls.go            # Implements direct system calls
+│   │── utils.go               # Utility functions and helpers
+│   │── persistence.go         # Ensures PhantomX starts after reboot
+│   │── privilege_escalation.go # Gains admin/root privileges
+│   │── self_destruct.go       # Securely removes PhantomX from the system
 │
 │── shellcode/
-│   │── reverse_shellcode.go  # Reverses shellcode before execution
-│   └── shellcode_xor.go      # Shellcode encryption using XOR
+│   │── reverse_shellcode.go    # Reverses shellcode before execution
+│   │── shellcode_xor.go        # Encrypts shellcode using XOR
 │
 │── build/
-│   └── compile.go           # Compilation script
+│   │── compile.sh              # Compilation script for the project
+│   │── dependencies.go         # Handles necessary dependency checks
 │
 │── docs/
-│   └── README.md            # Documentation
+│   │── README.md               # Documentation for the project
+│   │── INSTALLATION.md         # Setup and installation guide
+│   │── USAGE.md                # How to use PhantomX
 │
-└── config/
-    └── settings.json        # Configuration file for customization
+│── config/
+│   │── settings.go             # Configuration file for customization
+│   │── network.go              # Handles network settings & communication
+│
+└── logs/
+    │── keystrokes.log          # Logs captured keystrokes
+    │── network_capture.log     # Logs network traffic
 ```
+
 
 ## 3. Installation & Setup
 
